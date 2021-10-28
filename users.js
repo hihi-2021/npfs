@@ -6,8 +6,8 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   db.getUsers()
-    .then(users => {
-      res.render('index', { users: users })
+    .then(trainers => {
+      res.render('index', { trainers})
       return null
     })
     .catch(err => {
