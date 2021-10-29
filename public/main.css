@@ -15,7 +15,7 @@ h1 {
 }
 
 .login {
-  max-width: 600px;
+  max-width: 500px;
   border: black 5px solid;
   margin: 0 auto;
   padding: 30px;
@@ -24,7 +24,7 @@ h1 {
 }
 
 .dropdown {
-  min-width: 210px;
+  min-width: 250px;
   min-height: 40px;  
   border: black 5px solid;
   border-radius: 30px;
@@ -32,8 +32,7 @@ h1 {
 }
 
 input {
-
-  width: 210px;
+  width: 250px;
   border: black 5px solid;
   border-radius: 30px;
   height: 40px; 
@@ -41,6 +40,7 @@ input {
 }
 
 .button {
+  max-width: 140px;
   border: black 5px solid;
   border-radius: 30px;
   background-color: #ececec;
@@ -55,4 +55,31 @@ input {
 .form .button {
   min-width: 120px;
   margin-left: 20px;
+}
+
+.pbox{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.pbox a{
+  border: black 5px solid;
+  border-radius: 20px;
+  max-width: 300px;
+  margin: 0 20px;
+  padding: 60px 0;
+  text-decoration: none!;
+}
+
+.pbox a h1{
+  font-size: 28px;
+  color: black;
+  text-decoration: none;
+}
+
+.pbox a img {
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto;
 }
