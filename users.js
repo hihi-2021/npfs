@@ -15,8 +15,22 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/trainerid', (req, res) => {
-  res.render('trainerid')
+router.post('/', (req, res) => {
+  console.log(req.body)
+  const {name} = req.body
+  db.createNewTrainer(name)
+  .then(id => {
+    res.redirect(`trainerid/${id}`)
+  })
+})
+
+router.get('/trainerid/:id', (req, res) => {
+  const id = req.params.id
+  console.log(id)
+  db.getTrainersPokemon(id)
+    .then( (listOfPokemon) => {
+    res.render('trainerid', {listOfPokemon})
+  })
 })
 
 module.exports = router
