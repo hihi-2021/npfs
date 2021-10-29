@@ -16,7 +16,10 @@ function getTrainersPokemon (id, db = connection) {
   .select('pokemonList.name', 'pokemonList.image')
 }
 
-
+function getAllPokemon(db = connection){
+  return db('pokemonList')
+  .select('pokemonList.name', 'pokemonList.image')
+}
 
 function createNewTrainer(name, db = connection){
   console.log(name)
@@ -29,5 +32,6 @@ module.exports = {
   getUser: getUser,
   getUsers: getUsers,
   getTrainersPokemon,
+  getAllPokemon,
   createNewTrainer
 }
