@@ -10,7 +10,28 @@ function getUser (id, db = connection) {
   return db('trainers').where('id', id).first()
 }
 
+function getTrainersPokemon (id, db = connection) {
+  return db('tPokemon').where('trainer_id', id)
+  .join('pokemonList', 'pokemonList.id', 'tPokemon.id')
+  .select('pokemonList.name', 'pokemonList.image')
+}
+
+function getAllPokemon(db = connection){
+  return db('pokemonList')
+  .select('pokemonList.name', 'pokemonList.image')
+}
+
+function createNewTrainer(name, db = connection){
+  console.log(name)
+  return db('trainers')
+    .insert({name})
+}
+
+
 module.exports = {
   getUser: getUser,
-  getUsers: getUsers
+  getUsers: getUsers,
+  getTrainersPokemon,
+  getAllPokemon,
+  createNewTrainer
 }
