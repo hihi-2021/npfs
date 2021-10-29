@@ -16,21 +16,40 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body)
-  const {name} = req.body
-  db.createNewTrainer(name)
+  const {trainer} = req.body
+  db.createNewTrainer(trainer)
   .then(id => {
     res.redirect(`trainerid/${id}`)
   })
 })
 
-router.get('/trainerid/:id', (req, res) => {
+router.post('/trainerid/:id/new', (req, res) => {
   const id = req.params.id
-  console.log(id)
-  db.getTrainersPokemon(id)
+  const { pokemonId } = req.body
+  db.updateTrainersPokemon(trainers_id, pokemonId)
     .then( (listOfPokemon) => {
-    res.render('trainerid', {listOfPokemon})
+    res.render(`trainerid/${id}/new`, {listOfPokemon})
   })
 })
+
+
+router.get('/trainerid/:id', (req, res) => {
+  const id = req.params.id
+  db.getTrainersPokemon(id)
+    .then( (listOfPokemon) => {
+    res.render('trainerid', {listOfPokemon, id})
+  })
+})
+
+router.get('/trainerid/:id/new', (req, res) => {
+  //const id = req.params.id
+  db.getAllPokemon()
+    .then( (listOfPokemon) => {
+    res.render('new', {listOfPokemon})
+  })
+})
+
+
+
 
 module.exports = router

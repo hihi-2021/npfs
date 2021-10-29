@@ -16,4 +16,6 @@
 </div>
 
 <br>
-<a href="/trainerid/1">Ash</a> <a href="/trainerid/2">Misty</a> <a href="/trainerid/3">Brock</a>
+{{#each trainers}}
+<a href='/trainerid/{{id}}'>{{name}}</a>
+{{/each}}
