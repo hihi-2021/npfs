@@ -1,9 +1,11 @@
 <h1>Choose Your New Best Friend</h1>
-<form action="/{{trainerId}}/new" method="post">   
-<select>
+
     {{#each pokemonList}}
-        <option value={{name}}>{{name}}</option>
+    <img src={{image}}>
+    <p>{{name}}</p>
+    <form action="/{{trainerId}}/new" method="post">   
+    <input type="hidden" name="name" value={{name}}>
+    <input type="submit" name="" value="Select Pokemon">
+    </form>
     {{/each}}
-</select>
-<input type="submit" name="" value="Select Pokemon">
-</form>
+
