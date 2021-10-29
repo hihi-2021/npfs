@@ -1,15 +1,19 @@
-<h1>Hi Mum!</h1>
+<h1>Gotta Catch Em All</h1>
+<div class="login">
+  <form class="form" action="/" method="post">
+    <select id="trainers" class="dropdown">
+    {{#each trainers}}
+    <option value={{name}}>{{name}}</option>
+    {{/each}}
+    </select>
+    <input class="button" type="submit" name="" value="Select Trainer">
+  </form>
 
-<form class="form" action="/" method="post">
-  <select id=trainers>
-  {{#each trainers}}
-  <option value={{name}}>{{name}}</option>
-  {{/each}}
-  </select>
-  <input type="submit" name="" value="Select Trainer">
-</form>
+  <form class="form" action="/" method="post">
+    <input type="text" name="trainer" placeholder="What's your name trainer?">
+    <input class="button" type="submit" name="" value="New Trainer">
+  </form>
+</div>
 
-<form class="form" action="/" method="post">
-  <input type="text" name="trainer" placeholder="What's your name trainer?">
-  <input type="submit" name="" value="Select Trainer">
-</form>
+<br>
+<a href="/trainerid">trainertest</a>
