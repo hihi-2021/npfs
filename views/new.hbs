@@ -1,0 +1,9 @@
+<h1>Choose Your New Best Friend</h1>
+<form action="/{{trainerId}}/new" method="post">   
+<select>
+    {{#each pokemonList}}
+        <option value={{name}}>{{name}}</option>
+    {{/each}}
+</select>
+<input type="submit" name="" value="Select Pokemon">
+</form>

@@ -1,0 +1,58 @@
+* {
+  font-family: 'Avenir', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  box-sizing: content-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+}
+
+.form {
+  padding-bottom: 20px;
+}
+
+.login {
+  max-width: 600px;
+  border: black 5px solid;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+
+}
+
+.dropdown {
+  min-width: 210px;
+  min-height: 40px;  
+  border: black 5px solid;
+  border-radius: 30px;
+  padding-left: 16px;
+}
+
+input {
+
+  width: 210px;
+  border: black 5px solid;
+  border-radius: 30px;
+  height: 40px; 
+  padding: 0 10px; 
+}
+
+.button {
+  border: black 5px solid;
+  border-radius: 30px;
+  background-color: #ececec;
+  padding: 0 20px;
+  float: right;
+}
+
+.button:hover {
+  background-color: #d4d4d4;
+}
+
+.form .button {
+  min-width: 120px;
+  margin-left: 20px;
+}
